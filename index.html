@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Mokipra（モキプラ）- AI模擬面接パートナー</title>
-<meta name="description" content="AIが面接官として質問し、回答をその場で評価するオンライン模擬面接サービス。アルバイト・新卒就活・エンジニア転職・大学院入試の面接練習に対応。音声入力で本番に近い形式の練習ができます。">
+<title>面接練習ならMokipra（モキプラ）｜AI面接官とオンライン模擬面接</title>
+<meta name="description" content="就活の面接練習をひとりで。AIが面接官になって質問し、回答をその場で採点するオンライン模擬面接サービスです。アルバイト・新卒就活・エンジニア転職・大学院入試の面接練習に対応し、グループディスカッション練習もできます。無料で試せます。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mokipra.jp/">
 
@@ -17,12 +17,12 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mokipra">
-<meta property="og:title" content="Mokipra（モキプラ）- AI模擬面接パートナー">
+<meta property="og:title" content="面接練習ならMokipra（モキプラ）｜AI面接官とオンライン模擬面接">
 <meta property="og:description" content="AIが面接官として質問し、回答をその場で評価するオンライン模擬面接サービス。アルバイト・新卒就活・エンジニア転職・大学院入試の面接練習に対応。">
 <meta property="og:url" content="https://mokipra.jp/">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mokipra（モキプラ）- AI模擬面接パートナー">
+<meta name="twitter:title" content="面接練習ならMokipra（モキプラ）｜AI面接官とオンライン模擬面接">
 <meta name="twitter:description" content="AIが面接官として質問し、回答をその場で評価するオンライン模擬面接サービス。">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +125,8 @@ section { padding: 44px 0; }
 .mkp-card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease; }
 .mkp-card:hover { border-color: var(--ai-soft); box-shadow: 0 6px 20px rgba(34,56,92,.09); transform: translateY(-2px); }
 
-.mkp-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mkp-grid-3 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.mkp-grid-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .mkp-feat { padding: 22px 20px; text-align: center; }
 .mkp-feat-icon { color: var(--ai); display: flex; justify-content: center; margin-bottom: 14px; }
 .mkp-feat-icon svg { display: block; }
@@ -176,6 +177,19 @@ section { padding: 44px 0; }
 .plan-max h3, .plan-max .limit { color: var(--seal); }
 .mkp-note { text-align: center; color: var(--muted); font-size: .78rem; margin: 18px 0 0; line-height: 1.8; }
 
+/* ---- FAQ ---- */
+.mkp-faq { background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 0; margin-bottom: 10px; }
+.mkp-faq summary { cursor: pointer; padding: 15px 18px; font-size: .92rem;
+  font-weight: 700; color: var(--ink); list-style: none; position: relative;
+  padding-right: 44px; }
+.mkp-faq summary::-webkit-details-marker { display: none; }
+.mkp-faq summary::after { content: "+"; position: absolute; right: 18px; top: 13px;
+  font-size: 1.2rem; color: var(--ai); font-weight: 400; }
+.mkp-faq[open] summary::after { content: "−"; }
+.mkp-faq p { margin: 0; padding: 0 18px 16px; font-size: .88rem; line-height: 1.95;
+  color: var(--ink-soft); border-top: 1px solid var(--line-soft); padding-top: 14px; }
+
 /* ---- 末尾CTA ---- */
 .mkp-final { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; }
 .mkp-final h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 800; letter-spacing: .05em; margin: 0 0 12px; }
@@ -189,7 +203,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
 .copyright { color: var(--muted); font-size: .78rem; margin: 0; }
 
 @media (max-width: 720px) {
-  .mkp-grid-3 { grid-template-columns: 1fr; }
+  .mkp-grid-3, .mkp-grid-plans { grid-template-columns: 1fr; }
   .mkp-scene-grid { grid-template-columns: 1fr; }
   .mkp-scene:nth-child(odd) { border-right: none; }
   .mkp-scene:nth-last-child(-n+2) { border-bottom: 1px solid var(--line-soft); }
@@ -197,6 +211,40 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
   section { padding: 34px 0; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "面接練習はひとりでもできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "できます。Mokipraは AI が面接官役を務めるため、相手を探さずにひとりで面接練習ができます。深夜でも早朝でも、思い立ったときに始められます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "就活の面接練習は何回くらいすればよいですか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "回数よりも、毎回の振り返りが重要です。Mokipraは面接ごとに総合評価と改善点を提示するため、次に直す点を1つ決めてから再挑戦する使い方を想定しています。無料プランでは1日1回、有料プランでは1日10回まで練習できます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "グループディスカッションの練習もできますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pro・Maxプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。" }
+    },
+    {
+      "@type": "Question",
+      "name": "アルバイトの面接練習にも使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "使えます。アルバイト面接、新卒採用面接、ITエンジニア採用面接、大学院・推薦入試面接の4つの場面に対応しています。" }
+    },
+    {
+      "@type": "Question",
+      "name": "無料で使えますか？",
+      "acceptedAnswer": { "@type": "Answer", "text": "無料プランがあります。メールアドレスの登録のみで始められ、クレジットカードは不要です。" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -205,7 +253,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
   <h1 class="mkp-hero-title">Mokipra</h1>
   <p class="mkp-hero-kana">M O K I P R A</p>
   <div class="mkp-hero-rule"></div>
-  <p class="mkp-hero-tag">面接の不安を、自信に変える。</p>
+  <h2 class="mkp-hero-tag">就活の面接練習を、ひとりで。面接の不安を自信に変える。</h2>
   <p class="mkp-hero-desc">Mokipra（モキプラ）は、本番さながらの緊張感で練習できるAI模擬面接パートナーです。最新のAIがあなたの回答をリアルタイムで分析し、面接後にはプロ視点での総合評価や改善アドバイスを提供します。</p>
   <div class="mkp-cta-row">
     <a class="mkp-btn" href="https://app.mokipra.jp">無料で面接を始める</a>
@@ -244,6 +292,20 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
       </div>
       <h3>AIによる自動採点</h3>
       <p>面接終了後、回答内容を分析して総合評価を提示します。強み・改善点・次に取るべき行動が具体的にわかります。</p>
+    </article>
+
+    <article class="mkp-card mkp-feat">
+      <div class="mkp-feat-icon">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="14" r="4.2"/>
+          <circle cx="28" cy="14" r="4.2"/>
+          <path d="M4.5 30v-1.5a7.5 7.5 0 0 1 15 0V30"/>
+          <path d="M20.5 30v-1.5a7.5 7.5 0 0 1 15 0V30"/>
+          <path d="M14.5 20.5h11"/>
+        </svg>
+      </div>
+      <h3>グループディスカッション練習</h3>
+      <p>AI参加者4名と本番形式で議論します。司会・書記・タイムキーパーの役割も選べ、終了後は5軸10段階で評価されます（Pro・Maxプラン）。</p>
     </article>
 
     <article class="mkp-card mkp-feat">
@@ -326,14 +388,14 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
 <section class="wrap">
   <h2 class="mkp-sec-title">料金プラン</h2>
   <p class="mkp-sec-lead">まずは無料で。物足りなくなったら、いつでも切り替えられます。</p>
-  <div class="mkp-grid-3">
+  <div class="mkp-grid-plans">
 
     <article class="mkp-card mkp-plan plan-free">
       <h3>Free</h3>
       <p><span class="price">0</span><span class="unit">円</span></p>
       <p class="limit">面接 1日 1回まで</p>
       <ul>
-        <li>AI音声面接</li>
+        <li>AI音声面接（1回4ターン）</li>
         <li>自動採点・アドバイス</li>
       </ul>
     </article>
@@ -344,8 +406,9 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
       <p><span class="price">480</span><span class="unit">円 / 月</span></p>
       <p class="limit">面接 1日 10回まで</p>
       <ul>
-        <li>AI音声面接</li>
+        <li>AI音声面接（1回10ターン）</li>
         <li>自動採点・アドバイス</li>
+        <li>グループディスカッション練習</li>
         <li>面接履歴の保存</li>
       </ul>
     </article>
@@ -357,6 +420,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
       <p class="limit">面接 1日 10回まで</p>
       <ul>
         <li>Proのすべての機能</li>
+        <li>グループディスカッション練習</li>
         <li>PDF読み込み対応</li>
         <li>書類に基づく深掘り質問</li>
       </ul>
@@ -364,6 +428,31 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
 
   </div>
   <p class="mkp-note">表示価格は税込です。有料プランはStripeによるクレジットカード決済で、いつでも解約できます。</p>
+</section>
+
+
+<section class="wrap">
+  <h2 class="mkp-sec-title">よくある質問</h2>
+    <details class="mkp-faq">
+      <summary>面接練習はひとりでもできますか？</summary>
+      <p>できます。Mokipraは AI が面接官役を務めるため、相手を探さずにひとりで面接練習ができます。深夜でも早朝でも、思い立ったときに始められます。</p>
+    </details>
+    <details class="mkp-faq">
+      <summary>就活の面接練習は何回くらいすればよいですか？</summary>
+      <p>回数よりも、毎回の振り返りが重要です。Mokipraは面接ごとに総合評価と改善点を提示するため、次に直す点を1つ決めてから再挑戦する使い方を想定しています。無料プランでは1日1回、有料プランでは1日10回まで練習できます。</p>
+    </details>
+    <details class="mkp-faq">
+      <summary>グループディスカッションの練習もできますか？</summary>
+      <p>Pro・Maxプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。</p>
+    </details>
+    <details class="mkp-faq">
+      <summary>アルバイトの面接練習にも使えますか？</summary>
+      <p>使えます。アルバイト面接、新卒採用面接、ITエンジニア採用面接、大学院・推薦入試面接の4つの場面に対応しています。</p>
+    </details>
+    <details class="mkp-faq">
+      <summary>無料で使えますか？</summary>
+      <p>無料プランがあります。メールアドレスの登録のみで始められ、クレジットカードは不要です。</p>
+    </details>
 </section>
 
 <section class="mkp-final">
