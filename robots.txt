@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# アプリ本体は noindex を設定しているため、クロールも案内しない
+Disallow: /app/
+
+Sitemap: https://mokipra.jp/sitemap.xml
