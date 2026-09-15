@@ -42,8 +42,7 @@
   "description": "AIが面接官として質問し、回答をその場で評価するオンライン模擬面接サービス。アルバイト・新卒就活・エンジニア転職・大学院入試の面接練習に対応。",
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "JPY" },
-    { "@type": "Offer", "name": "Pro", "price": "480", "priceCurrency": "JPY" },
-    { "@type": "Offer", "name": "Max", "price": "980", "priceCurrency": "JPY" }
+    { "@type": "Offer", "name": "Pro", "price": "480", "priceCurrency": "JPY" }
   ]
 }
 </script>
@@ -126,7 +125,7 @@ section { padding: 44px 0; }
 .mkp-card:hover { border-color: var(--ai-soft); box-shadow: 0 6px 20px rgba(34,56,92,.09); transform: translateY(-2px); }
 
 .mkp-grid-3 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.mkp-grid-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.mkp-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 640px; margin: 0 auto; }
 .mkp-feat { padding: 22px 20px; text-align: center; }
 .mkp-feat-icon { color: var(--ai); display: flex; justify-content: center; margin-bottom: 14px; }
 .mkp-feat-icon svg { display: block; }
@@ -173,8 +172,6 @@ section { padding: 44px 0; }
 .plan-free h3, .plan-free .limit { color: var(--muted); }
 .plan-pro { border-color: var(--ai); box-shadow: 0 4px 18px rgba(34,56,92,.10); }
 .plan-pro h3, .plan-pro .limit { color: var(--ai); }
-.plan-max { border-color: var(--seal); box-shadow: 0 4px 18px rgba(184,68,58,.10); }
-.plan-max h3, .plan-max .limit { color: var(--seal); }
 .mkp-note { text-align: center; color: var(--muted); font-size: .78rem; margin: 18px 0 0; line-height: 1.8; }
 
 /* ---- FAQ ---- */
@@ -203,7 +200,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
 .copyright { color: var(--muted); font-size: .78rem; margin: 0; }
 
 @media (max-width: 720px) {
-  .mkp-grid-3, .mkp-grid-plans { grid-template-columns: 1fr; }
+  .mkp-grid-3, .mkp-grid-2 { grid-template-columns: 1fr; }
   .mkp-scene-grid { grid-template-columns: 1fr; }
   .mkp-scene:nth-child(odd) { border-right: none; }
   .mkp-scene:nth-last-child(-n+2) { border-bottom: 1px solid var(--line-soft); }
@@ -230,7 +227,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
     {
       "@type": "Question",
       "name": "グループディスカッションの練習もできますか？",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pro・Maxプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。" }
+      "acceptedAnswer": { "@type": "Answer", "text": "Proプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。" }
     },
     {
       "@type": "Question",
@@ -305,7 +302,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
         </svg>
       </div>
       <h3>グループディスカッション練習</h3>
-      <p>AI参加者4名と本番形式で議論します。司会・書記・タイムキーパーの役割も選べ、終了後は5軸10段階で評価されます（Pro・Maxプラン）。</p>
+      <p>AI参加者4名と本番形式で議論します。司会・書記・タイムキーパーの役割も選べ、終了後は5軸10段階で評価されます（Proプラン）。</p>
     </article>
 
     <article class="mkp-card mkp-feat">
@@ -317,7 +314,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
         </svg>
       </div>
       <h3>書類を読み込んだ深い面接</h3>
-      <p>エントリーシートや研究計画書のPDFを読み込ませると、その内容に踏み込んだ質問が生成されます（Maxプラン）。</p>
+      <p>エントリーシートや研究計画書のPDFを読み込ませると、その内容に踏み込んだ質問が生成されます（Proプラン）。</p>
     </article>
 
   </div>
@@ -388,7 +385,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
 <section class="wrap">
   <h2 class="mkp-sec-title">料金プラン</h2>
   <p class="mkp-sec-lead">まずは無料で。物足りなくなったら、いつでも切り替えられます。</p>
-  <div class="mkp-grid-plans">
+  <div class="mkp-grid-2">
 
     <article class="mkp-card mkp-plan plan-free">
       <h3>Free</h3>
@@ -404,28 +401,18 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
       <span class="mkp-badge" style="background: var(--ai);">いちばん人気</span>
       <h3>Pro</h3>
       <p><span class="price">480</span><span class="unit">円 / 月</span></p>
-      <p class="limit">面接 1日 10回まで</p>
+      <p class="limit">面接 1日 5回まで</p>
       <ul>
         <li>AI音声面接（1回10ターン）</li>
         <li>自動採点・アドバイス</li>
         <li>グループディスカッション練習</li>
+        <li>エントリーシート添削</li>
+        <li>PDF読み込み・書類に基づく質問</li>
         <li>面接履歴の保存</li>
       </ul>
     </article>
 
-    <article class="mkp-card mkp-plan plan-max">
-      <span class="mkp-badge" style="background: var(--seal);">書類対応</span>
-      <h3>Max</h3>
-      <p><span class="price">980</span><span class="unit">円 / 月</span></p>
-      <p class="limit">面接 1日 10回まで</p>
-      <ul>
-        <li>Proのすべての機能</li>
-        <li>グループディスカッション練習</li>
-        <li>PDF読み込み対応</li>
-        <li>書類に基づく深掘り質問</li>
-      </ul>
-    </article>
-
+    
   </div>
   <p class="mkp-note">表示価格は税込です。有料プランはStripeによるクレジットカード決済で、いつでも解約できます。</p>
 </section>
@@ -443,7 +430,7 @@ footer a:hover { color: var(--ai); text-decoration: underline; }
     </details>
     <details class="mkp-faq">
       <summary>グループディスカッションの練習もできますか？</summary>
-      <p>Pro・Maxプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。</p>
+      <p>Proプランで利用できます。AI参加者4名と本番形式で議論し、司会・書記・タイムキーパーの役割を選んで練習できます。終了後は参加姿勢や議論への貢献など5つの観点で評価されます。</p>
     </details>
     <details class="mkp-faq">
       <summary>アルバイトの面接練習にも使えますか？</summary>
